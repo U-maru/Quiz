@@ -10,3 +10,36 @@
     font-size: 17px !important;
     border-radius: 0 !important;
 }
+
+
+#sample_01 {
+    height: 10%;
+    margin-left: 25%;
+    margin-right: 25%;
+    border: 2px solid #000;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+}
+#sample_02 {
+    height: 75%;
+    margin-left: 25%;
+    margin-right: 25%;
+    border: 2px solid #000;
+    border-top: none;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+}
+#q_area {
+    height: 30%;
+    border: 3px solid #f00;
+    border-radius: 25px;
+}
+#a_area {
+    /*height: 30%;*/
+    border: 3px solid #00f;
+    border-radius: 25px;
+}
+#a_btn {
+    font-size: small;
+    text-align: left;
+}

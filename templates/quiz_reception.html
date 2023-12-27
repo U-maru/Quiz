@@ -6,7 +6,7 @@
     <title>Quiz</title>
 
     <!-- 独自のCSS -->
-    <link rel="stylesheet" href="{{ url_for('static', filename='index.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='quiz_reception.css') }}">
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <!-- Bootstrap JS(compiled bundle) -->
@@ -14,34 +14,86 @@
 </head>
 <body>
 
-    <!-- navbar -->
-    <nav class="navbar navbar-expand-lg bg-dark py-3">
-        <div class="container">
-            <a class="navbar-brand">
-                <h1 class="fs-4 text-white pt-1">U_maru&nbsp;&nbsp;&nbsp;Home</h1>
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="/">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Quiz</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Other1</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Other2</a>
-                    </li>
-                    <button class="btn btn-primary ms-3" id="nav-button">U_maru</button>
-                </ul>
+    <header class="sticky-top">
+        <!-- navbar -->
+        <nav class="navbar navbar-expand-lg bg-dark py-3">
+            <div class="container">
+                <a class="navbar-brand">
+                    <h1 class="fs-4 text-white pt-1">U_maru&nbsp;&nbsp;&nbsp;Home</h1>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="/">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/quiz_reception">Quiz</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Other1</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Other2</a>
+                        </li>
+                        <button class="btn btn-primary ms-3" id="nav-button">U_maru</button>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="fuga vh-100 pt-3 btn-secondary">
+        <div class="row" id="sample_01">
+            <div class="col-md-3"></div>
+            <div class="col-md-6">
+                <h1 class="text-white text-center mt-2">JOJO_Quiz!!</h1>
+            </div>
+            <div class="col-md-3"></div>
+        </div>
+        <div class="row pt-3" id="sample_02">
+            <div class="col-md-12">
+                <div class="card text-center mt-3 mx-2" id="q_area">
+                    <div class="card-header" id="q-card-header">
+                        <h5 class="card-title my-2 text-black">問題：</h5>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-text">ここに問題が表示されます</p>
+                    </div>
+                </div>
+                <div class="card text-center mt-3 mx-2" id="a_area">
+                    <div class="card-header" id="a-card-header">
+                        <h5 class="card-title my-2 text-black">解答欄</h5>
+                    </div>
+                    <div class="card-body">
+                        <div class="row px-5">
+                            <input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off">
+                            <label class="btn btn-lg btn-outline-secondary col-md-5 mb-3" id="a_btn" for="btnradio1">1:ジャン・ピエール・ポルナレフ</label>
+
+                            <div class="col-md-2"></div>
+                            <input type="radio" class="btn-check" name="btnradio" id="btnradio2" autocomplete="off">
+                            <label class="btn btn-lg btn-outline-secondary col-md-5 mb-3" id="a_btn" for="btnradio2">2:花京院典明</label>
+
+                            <input type="radio" class="btn-check" name="btnradio" id="btnradio3" autocomplete="off">
+                            <label class="btn btn-lg btn-outline-secondary col-md-5" id="a_btn" for="btnradio3">3:吉良吉影</label>
+
+                            <div class="col-md-2"></div>
+                            <input type="radio" class="btn-check" name="btnradio" id="btnradio4" autocomplete="off">
+                            <label class="btn btn-lg btn-outline-secondary col-md-5" id="a_btn" for="btnradio4">4:ドッピオ</label>
+                        </div>
+                    </div>
+                    <div class="card-footer text-body-secondary" id="a-card-footer">
+                        <div class="row px-5 d-md-flex justify-content-md-end">
+                            <button class="btn btn-primary col-md-5">次の問題へ</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-light mt-3 mx-2" style="height: 10%;"></div>
             </div>
         </div>
-    </nav>
-    
+    </div>
+
 </body>
 </html>
